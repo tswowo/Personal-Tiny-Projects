@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon/add.png</file>
+        <file>icon/file.png</file>
+        <file>icon/next.png</file>
+        <file>icon/pause.png</file>
+        <file>icon/play.png</file>
+        <file>icon/prev.png</file>
+        <file>icon/search.png</file>
+        <file>icon/shun.png</file>
+        <file>icon/sui.png</file>
+        <file>icon/list.png</file>
+        <file>image/background_1.jpg</file>
+        <file>image/background_3.jpg</file>
+        <file>icon/xun.png</file>
+        <file>songs/stonebreakschest.mp3</file>
+        <file>songs/hatsune_miku.mp3</file>
+        <file>songs/Divine Whim.mp3</file>
+        <file>icon/background.png</file>
+        <file>image/project_back.jpg</file>
+        <file>image/web_back.jpg</file>
+        <file>songs/Merry Christmas Mr_Lawrence.mp3</file>
+    </qresource>
+</RCC>
