@@ -1,0 +1,24 @@
+#include"stdio.h"
+#include"stdlib.h"
+#include<time.h>
+main(){
+	int b,i=0,a;
+	srand(time(0));
+	b=rand()%10;
+	while(i<100000){
+		i++;
+		if(i==1)
+			printf("请输入猜想整数(0-9)：");
+		scanf("%d",&a);
+		fflush(stdin);
+		if(a==b){
+			printf("猜想正确，猜想次数为%d次\n",i);
+			break;
+		}
+		if(a!=b)
+			printf("猜想错误，请重新输入：");
+		if(a==999)
+			break;
+	}
+	printf("游戏结束");
+}
