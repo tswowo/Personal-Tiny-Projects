@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite Sheet Example</title>
+    <style>
+        /* 通用图标样式 */
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-image: url(sprite.png);
+            /* 这里用占位图代替，你需要替换成实际的雪碧图地址 */
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 50px;
+        }
+
+        /* 二维码图标样式 */
+        .qrcode {
+            background-position: 0 0;
+            top: 20px;
+            /* 距离屏幕顶部 20px，可按需调整 */
+        }
+
+        /* 星星图标样式 */
+        .star {
+            background-position: 0 -50px;
+            top: 80px;
+            /* 可按需调整 */
+        }
+
+        /* HOT 标签图标样式 */
+        .hot {
+            background-position: 0 -100px;
+            top: 140px;
+            /* 可按需调整 */
+        }
+
+        /* 眼睛图标样式 */
+        .eye {
+            background-position: 0 -150px;
+            top: 200px;
+            /* 可按需调整 */
+        }
+
+        /* 放大镜图标样式 */
+        .magnifier {
+            background-position: 0 -200px;
+            top: 260px;
+            /* 可按需调整 */
+        }
+
+        /* 问号图标样式 */
+        .question {
+            background-position: 0 -250px;
+            top: 320px;
+            /* 可按需调整 */
+        }
+
+        /* 向上箭头图标样式 */
+        .arrow-up {
+            background-position: 0 -300px;
+            top: 380px;
+            /* 可按需调整 */
+        }
+
+        /* 蓝色向上箭头图标样式 */
+        .blue-arrow-up {
+            background-position: 0 -350px;
+            top: 440px; /* 可按需调整 */
+        }
+    </style>
+</head>
+
+<body>
+    <p style="height: 2000px;"></p>
+    <div class="icon qrcode"></div>
+    <div class="icon star"></div>
+    <div class="icon hot"></div>
+    <div class="icon eye"></div>
+    <div class="icon magnifier"></div>
+    <div class="icon question"></div>
+    <div class="icon arrow-up"></div>
+    <div class="icon blue-arrow-up"></div>
+</body>
+
+</html>

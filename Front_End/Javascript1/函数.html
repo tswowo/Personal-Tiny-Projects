@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+      //函数也是一个对象
+      var f1=new Function(console.log("this's the first function"));//这样声明则会在声明时执行，因为解释器先遇到console.log
+      console.log(typeof f1);
+      function f2(a=0,b=0)//这样仅会创建函数对象并绑定到f2，不会直接执行
+      {
+         console.log("this's the second function:"+a+b);
+      }
+      var f3=function(a=0,b=0)//创建右边的"匿名函数"表达式，将函数对象赋值给f3，同样不会立刻执行
+      {
+         console.log("this's the third function:"+a+b);
+      }
+      function f4(a)
+      {
+         return a;
+      }
+      f1();
+      f2();
+      f2(1);//默认参数例子
+      f2(1,2);
+      f3();
+      var self=f4(1);
+      console.log(self);
+      function FF()//可以嵌套函数，其内部函数作用域在外部函数内
+      {
+         var a=1;
+         var b=2;
+         function ff()
+         {
+            console.log(a+b);
+         }
+      }
+      //立即执行函数
+      (function(){
+         console.log("我是一个立即执行的匿名函数");
+      })();
+
+      var test={
+         functions: function f()
+         {
+            console.log("this's a function in an object");
+         }
+      };
+      console.log(test);
+
+      //this对象会根据调用方式的不同指向不同的对象
+      var name="你的名字";
+      var obj={
+         name:"我的名字",
+         sayName:function()
+         {
+            console.log(this.name);
+         }
+      }
+      obj.sayName();//this指向obj对象
+
+    </script>
+ </body>
+ </html>

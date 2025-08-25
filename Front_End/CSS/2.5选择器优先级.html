@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器优先级</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+            color:darkgreen;
+            font-size:20px;
+        }
+        li{
+            margin: 10px;
+            padding: 10px;
+            background-color:blanchedalmond;
+            color: red;
+            font-size: 20px;
+        }
+        .text_one{
+            color: blue;
+            font-size: 30px;
+        }
+        .text_two{
+            color:purple;
+            font-size: 30px;
+        }
+        #p1{
+            color:skyblue;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <em>
+        选择器优先级
+    </em>
+
+    <ol>
+        <li>全局选择器: *</li>
+        <li>元素选择器: 标签名称</li>
+        <li>类选择器: class属性名(.)</li>
+        <li>ID选择器: ID属性名(#)</li>
+    </ol>
+
+    <table border="1">
+        <tr>
+            <td>
+                选择器类型
+            </td>
+            <td>
+                标志
+            </td>
+            <td>
+                权重
+            </td>
+        </tr>
+        <tr>
+            <td>
+                元素选择器
+            </td>
+            <td>
+                标签名称
+            </td>
+            <td>
+                1
+            </td>
+        </tr>
+        <tr>
+            <td>
+                类选择器
+            </td>
+            <td>
+                class属性名(.)
+            </td>
+            <td>
+                10
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ID选择器
+            </td>
+            <td>
+                ID属性名(#)
+            </td>
+            <td>
+                100
+            </td>
+        </tr>
+        <tr>
+            <td>
+                内联样式
+            </td>
+            <td>
+                内联内容
+            </td>
+            <td>
+                1000
+            </td>
+        </tr>
+    </table>
+    <p class="text_one">
+        优先级从高到低：行内样式1000>ID选择器100>类选择器10>元素选择器1
+        <br>
+        <span class="text_one text_two">
+        并且同优先级，后面会覆盖前面
+        </span>
+    </p>
+
+    <p class="text" id="p1">
+        我是p标签案例，包括class:text{color:blue;}和id:p1{color:green;}
+        <br>
+        其中ID选择器优先级最高，所以我是绿色的
+    </p>
+
+
+</body>
+</html>

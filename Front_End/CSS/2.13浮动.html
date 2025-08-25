@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: tomato;
+            float: left;
+        }
+
+        .container {
+            width: 400px;
+            height: 200px;
+            background-color: antiquewhite;
+        }
+
+        ol li {
+            margin: 0 40px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <em>
+        浮动 增加一个浮层以放置内容
+    </em>
+    <h1>
+        float属性定义元素浮动的方向,任何元素都可以浮动
+    </h1>
+    <p>
+        left 向左浮动<br>
+        right 向右浮动
+    </p>
+    <p>
+        浮动的原理是使元素脱离文档流<br>
+        浮动只有左右浮动,没有上下浮动
+    </p>
+    <div>
+        <span>这是不脱离文档流:</span>
+        <div style="width: 400px; height: 200px; background-color: antiquewhite;">
+        </div>
+        <div style="width: 200px; height: 100px; background-color: red;">
+        </div>
+    </div>
+    (ps:如果想让a在b上浮动,要先写a再写b,不然a会在b下面生成)
+    <div>
+        <span style="float:left">这是脱离文档流:(left)</span>
+        <div class="box"></div>
+        <div class="container"></div>
+        <br>
+    </div>
+    <span>
+        <br>
+        --------------------------------------------------------
+        <br>
+    </span>
+    <div>
+        <p>
+            所有元素向左浮动
+        </p>
+        (ps:空间不够时会向下一行排列)
+        <div>
+            <br>
+            <div class="container">
+                <ol>
+                    <li><a href="#">导航1</a></li>
+                    <li><a href="#">导航2</a></li>
+                    <li><a href="#">导航3</a></li>
+                </ol>
+                <div class="box" style="background-color: yellow;"></div>
+                <div class="box" style="background-color: red;"></div>
+                <div class="box" style="background-color: blue;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

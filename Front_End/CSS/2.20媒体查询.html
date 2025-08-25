@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 会以PC端的标准大小对画面进行缩放 -->
+    <title>Media Query Example</title>
+    <style>
+        /* 当屏幕宽度小于 600px 时，应用以下样式 */
+        @media screen and (max-width: 600px) {
+            p {
+                color: red;
+                font-size: 14px;
+            }
+
+            p1 {
+                display: none;
+            }
+
+            p2 {
+                display: none;
+            }
+        }
+
+        /* 当屏幕宽度在 600px 到 900px 之间时，应用以下样式 */
+        @media screen and (min-width: 600px) and (max-width: 900px) {
+            p {
+                color: blue;
+                font-size: 16px;
+            }
+
+            p1 {
+                display: none;
+            }
+
+            p2 {
+                display: block;
+            }
+        }
+
+        /* 当屏幕宽度大于 900px 时，应用以下样式 */
+        @media screen and (min-width: 900px) {
+            p {
+                color: green;
+                font-size: 18px;
+            }
+
+            p1 {
+                display: block;
+            }
+
+            p2 {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>这是一个段落。根据屏幕宽度不同，文字颜色和字体大小会发生变化。</p>
+    <p1>p1</p1>
+    <p2>p2</p2>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name,age)
+        {
+            this.name=name;
+            this.age=age;
+            // this.getAge=getAge;//这样会引用同一个函数
+            this.getName=function()//而这样会为每个对象都创建一个相同的函数，开销比较大
+            {
+                return this.name;
+            }
+        }
+        // function getAge()//但是这种方式也有弊端，因为显然会污染作用域
+        // {
+        //     return this.age;
+        // }
+        Person.prototype.getAge=function()//这样就不会污染作用域了:只在其原型内调用上创建一个函数
+        {
+            return this.age;
+        }
+        var person1=new Person("张三",18);
+        var person2=new Person("李四",20);
+        console.log(person1.getName());
+        console.log(person1.getAge());
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        div {
+            width: auto;/*宽*/
+            height: 100px;/*高*/
+            padding: 50px 20px;/*内边距*/
+            background-color: antiquewhite;
+            margin: 20px 10px;/*外边距*/
+            border: 5px solid violet;/*边框*/
+        }
+        span{
+            width: 30px;
+            height: 50px;
+            background-color: red;
+            margin: 10px 5px;
+            border: 5px solid peru;
+            color:blue;
+            padding-left: 5px;
+            padding-right: 10px;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <em>盒子模型</em>
+    <p>
+        所有HTML元素都可以看作是一个盒子,在CSS中,Box Model用于设计和布局。
+        <br>
+        盒子模型本质是一个盒子,封装周围的HTML元素。比如你平时点开F12选中元素看到的
+        <br>
+        其中包括了:
+    <table border="1">
+        <tr>
+            <td>外边框</td>
+            <td>margin</td>
+            <td>清除边框外的内容,外边距是透明的</td>
+        </tr>
+        <tr>
+            <td>边框</td>
+            <td>border</td>
+            <td>围绕在内边距和内容外的边框</td>
+        </tr>
+        <tr>
+            <td>内边距</td>
+            <td>padding(默认一个值为上下左右)<br>(默认两个值分别为上下，左右)</td>
+            <td>清除内容周围的区域</td>
+        </tr>
+        <tr>
+            <td>实际内容</td>
+            <td>content</td>
+            <td>盒子的内容,显示文本和内容</td>
+        </tr>
+    </table>
+    </p>
+    <div>
+        我是div1内容content
+        <span>
+            我是内部的span1
+        </span>
+    </div>
+    <div>
+        我是div2内容content
+        <span>
+            我是内部的span2
+        </span>
+    </div>
+</body>
+
+</html>

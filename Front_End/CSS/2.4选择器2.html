@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器2</title>
+    <link rel="stylesheet" href="2.4选择器2.css">
+</head>
+<body>
+    <em>选择器2</em>
+    <h1>
+        <em>ID选择器</em>
+        <p id="p1">
+            针对某一个特定的标签来使用，只能使用一次。CSS中ID选择器以#来定义
+            <br>
+            ID是唯一的。ID只能以数字开头。
+        </p>
+        <p id="p1">
+            可以使用相同的ID选择器，但是非常不推荐。
+        </p>
+    </h1>
+    <h2>
+        <em>合并选择器</em>
+        <p class="combine_one">
+            合并选择器是指在CSS中，可以使用多个选择器来定义样式。
+            <br>
+            例如：
+            <br>
+            .combine_one, .combine_two, .combine_three, p2 {
+                color: blue;
+            }
+            <p id="p2">
+                这样就可以同时定义三个类和一个ID的样式。
+            </p>
+            <br>
+        </p>
+    </h2>
+</body>
+</html>

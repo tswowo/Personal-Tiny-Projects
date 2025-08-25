@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阴影效果示例</title>
+    <style>
+        /* 文本阴影样式 */
+        .text-shadow {
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: -20px 0 10px rgba(0, 0, 0, 0.2),
+                0 -20px 10px rgba(0, 0, 0, 0.2),
+                0 20px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 盒子阴影样式 */
+        .box-shadow {
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        /* 多重阴影样式，以三重为例 */
+        .multiple-shadows {
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+            box-shadow: -20px 0 10px rgba(0, 0, 0, 0.2),
+                0 -20px 10px rgba(0, 0, 0, 0.2),
+                0 20px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .shadow1 {
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .shadow2 {
+            text-shadow: -3px -3px 3px #ff0000;
+        }
+
+        .shadow3 {
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .shadow4 {
+            text-shadow: 4px 4px 0 #0000ff, -4px -4px 0 #ff00ff;
+        }
+
+        .shadow5 {
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 文本阴影示例 -->  
+     <h1>HTML5文本阴影样例</h1>
+    <h2>简单黑色阴影</h2>
+    <p class="shadow1">这是一个带有简单黑色阴影的文本。</p>
+    <h2>红色负向阴影</h2>
+    <p class="shadow2">这是一个带有红色负向阴影的文本。</p>
+    <h2>绿色模糊阴影</h2>
+    <p class="shadow3">这是一个带有绿色模糊阴影的文本。</p>
+    <h2>多色阴影</h2>
+    <p class="shadow4">这是一个带有多色阴影的文本。</p>
+    <h2>多层阴影</h2>
+    <p class="shadow5">这是一个带有多层阴影的文本。</p>
+    <!-- 盒子阴影示例 -->
+    <div class="box-shadow"></div>
+    <!-- 多重阴影示例 -->
+    <div class="multiple-shadows"></div>
+</body>
+
+</html>

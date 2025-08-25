@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关系选择器</title>
+    <style>
+        /*后代选择器例子*/
+        table td {
+            color: red;
+        }
+
+        /*子代选择器例子*/
+        div>p {
+            color: blue;
+        }
+
+        /*相邻兄弟选择器*/
+        h1+p {
+            color: black;
+        }
+
+        h2~p {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <em>
+        关系选择器
+    </em>
+    <br>
+    选择器选中的对象是被更改的元素
+    <table border="3">
+        <tr>
+            <td>种类</td>
+            <td>语法</td>
+            <td>例子</td>
+            <td>实例</td>
+        </tr>
+        <tr>
+            <td>后代选择器 选择所有被E包含的F元素(不论是否相邻),中间用空格隔开</td>
+            <td>E F{}</td>
+            <td>table td{
+                <br>
+                color: red;
+                <br>
+                }
+            </td>
+            <td>
+                <table border="1">
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>子代选择器 选择所有被E直接包含的直接子元素F,对深一层的元素不起作用,用>表示</td>
+            <td>E>F{}
+            </td>
+            <td>
+                div>p{<br>
+                color: blue;<br>
+                }
+            </td>
+            <td>
+                <div>
+                    <p>我是直接子元素1</p>
+                    <ol>
+                        <li>
+                            <p>
+                                我是间接子元素1
+                            </p>
+                        </li>
+                    </ol>
+                    <p>我是直接子元素2</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>相邻兄弟选择器 选择E后的第一个F元素</td>
+            <td>E+F{}</td>
+            <td>h1+p{
+                <br>color: green;
+                <br>}
+            </td>
+            <td>
+                <p>
+                    我是h1前的第一个p
+                </p>
+                <h1>
+                    我是h1
+                </h1>
+                <p>
+                    我是h1后的第一个p
+                </p>
+                <p>
+                    我是h1后的第二个p
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>通用兄弟选择器 选择E后的所有F元素</td>
+            <td>E~F{}</td>
+            <td>h2~p{
+                <br>color: green;
+                <br>}
+            </td>
+            <td>
+                <p>
+                    我是h2前的第一个p
+                </p>
+                <h2>
+                    我是h2
+                </h2>
+                <p>
+                    我是h2后的第一个p
+                </p>
+                <p>
+                    我是h2后的第二个p
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

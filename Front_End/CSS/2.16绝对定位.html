@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 50px;
+            left: 20px;
+
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>绝对定位脱离文档流.
+        <br>
+        且每个元素都属于不同的图层,而非属于同一个"非文档流";不同于浮动,浮动只有两层,文档流和非文档流
+        <br>
+    </div>
+    <div style="background-color: antiquewhite;width: 800px;">
+        <div class="box">普通盒子</div>
+        <div class="box absolute-box">绝对定位盒子in1</div>
+        <div class="box absolute-box" style="background-color: violet; top: 75px;left: 50px;">绝对定位盒子in2</div>
+        <div class="box">普通盒子</div>
+        <span>红色盒子脱离了文档流</span>
+    </div>
+    <div class="absolute-box" style="background-color: green;">绝对定位盒子out</div>
+    <span style="font-family:宋体;color: red;">
+        这两个红色盒子原则上都会向前查找到div标签来定位
+        <br>
+        而第二个红色盒子因为后渲染导致把第一个红色盒子in挤到下面了
+        <br>
+    </span>
+    <span>
+        在默认渲染顺序下，第二个绝对定位盒子通常会显示在第一个绝对定位盒子的前面，而不是后面。<br>
+        这是因为在 HTML 文档中，浏览器按照元素出现的先后顺序进行渲染。<br>
+        当两个绝对定位元素的z-index值相同时（都为默认的auto）<br>后渲染的元素会在视觉上覆盖先渲染的元素<br>即后出现的元素会显示在上面，看起来像是在前面。
+        <br>“绝对定位盒子 out” 在 HTML 文档中位于 “绝对定位盒子 in” 之后<br>所以在默认情况下，“绝对定位盒子 out” 会覆盖在 “绝对定位盒子 in” 的前面，而不是在其后面。
+    </span>
+</body>
+
+</html>

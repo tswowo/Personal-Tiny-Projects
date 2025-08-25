@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景属性</title>
+    <style>
+        .box1 {
+            width: 30px;
+            height: 30px;
+            background-color: antiquewhite;
+        }
+
+        .box2 {
+            width: 250px;
+            height: 250px;
+            color: #FFDD11;
+            background-image: url("../zzm1.png");
+            background-repeat: no-repeat;
+        }
+
+        .box4 {
+            width: 250px;
+            height: 250px;
+            background-image: url("../zzm1.png");
+        }
+    </style>
+</head>
+
+<body>
+    <em>
+        背景属性
+    </em>
+    <div style="font-size:30px">其实元素的背景大小是元素的总大小，包括填充和边界。通常在左上角，且通常如果不够大则会向右、下重复填充</div>
+    <table border="1">
+        <span>CSS的背景属性主要内容如下：</span>
+        <tr>
+            <td>属性</td>
+            <td>描述</td>
+        </tr>
+        <tr class="box1">
+            <td>background-color</td>
+            <td>设置背景颜色</td>
+        </tr>
+        <tr class="box2">
+            <td>background-image</td>
+            <td>设置背景图片</td>
+        </tr>
+        <tr>
+            <td>background-repeat</td>
+            <td>设置背景图片如何填充</td>
+        </tr>
+        <tr>
+            <td>background-size</td>
+            <td>设置背景图片大小属性</td>
+        </tr>
+        <tr>
+            <td>background-position</td>
+            <td>设置背景图片显示位置</td>
+        </tr>
+    </table>
+    <ol>
+        <li>
+            <span class="box1">
+                我是
+                <br>
+                background-color
+                <br>
+                背景颜色示例
+            </span>
+        </li>
+        <li>
+            <span class="box2">
+                我是
+                <br>
+                background-image
+                <br>
+                背景图片一般示例
+            </span>
+        </li>
+        <li>
+            <span>
+                background-repeat背景图片填充调整示例:
+            </span>
+            <br>
+            <table border="2" style="background-color: blue;">
+                <tr style="color:antiquewhite;">
+                    <td>值_________________</td>
+                    <td>说---------------明</td>
+                </tr>
+                <tr class="box2" style="background-repeat: repeat;">
+                    <td>repeat</td>
+                    <td>默认值</td>
+                </tr>
+                <tr class="box2" style="background-repeat: repeat-x;">
+                    <td>repeat-x</td>
+                    <td>只水平平铺</td>
+                </tr>
+                <tr class="box2" style="background-repeat: repeat-y;">
+                    <td>repeat-y</td>
+                    <td>只垂直平铺</td>
+                </tr>
+                <tr class="box2" style="background-repeat: no-repeat;">
+                    <td>no-repeat</td>
+                    <td>不平铺</td>
+                </tr>
+            </table>
+        </li>
+        <li>
+            <span>
+                我是
+                <br>
+                background-size
+                <br>
+                背景图片大小示例
+            </span>
+            <table border="3" style="color:chartreuse;">
+                <tr class="box4">
+                    <td>值</td>
+                    <td>说明</td>
+                </tr>
+                <tr class="box4" style="background-size: 250px 250px;">
+                    <td>length</td>
+                    <td>两个值，分别为宽度和高度，若只设定一个，那么另一个值auto</td>
+                </tr>
+                <tr class="box4" style="background-size: 50% 75%;">
+                    <td>percentage</td>
+                    <td>相对区域百分比，仍然会进行auto处理</td>
+                </tr>
+                <tr class="box4" style="background-size: cover;">
+                    <td>cover</td>
+                    <td>保持纵横比并将图片缩放成完全覆盖背景区域的最大大小</td>
+                </tr>
+                <tr class="box4" style="background-size: contain;">
+                    <td>contain</td>
+                    <td>保持纵横比并将图片缩放成完全覆盖背景区域的最小大小</td>
+                </tr>
+            </table>
+        </li>
+        <li>
+            <span>
+                我是图片位置示例
+            </span>
+            <table border="4" style="background-color:blue;">
+                <tr class="box1">
+                    <td>值</td>
+                    <td>说明</td>
+                </tr>
+                <tr class="box2" style="background-position:left center">
+                    <td>水平位置(left right center)+垂直位置(top bottom center)</td>
+                    <td>如left center为左 中</td>
+                </tr>
+                <tr class="box2" style="background-position:25% 50%">
+                    <td>x% y%</td>
+                    <td>
+                        左上角为0%0% 右下角为100%100%
+                        <br>
+                        指定一个值时，另一个值为50%
+                        <br>
+                        默认全为0%0%
+                    </td>
+                </tr>
+                <tr class="box2" style="background-position:30px">
+                    <td>xpos ypos</td>
+                    <td>单位为像素</td>
+                </tr>
+            </table>
+        </li>
+    </ol>
+</body>
+
+</html>

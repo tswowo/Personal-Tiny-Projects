@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            animation: myAnime1 5s infinite;
+            border-radius: 40%;
+            /*可以对执行动画设置多个属性:name动画名 duration持续时间 timing-function动画速率 delay延迟开始执行 iteration-count循环次数
+            direction播放方向 animation-play-state控制播放状态*/
+        }
+
+        div:hover {
+            /*当鼠标划上时暂停执行*/
+            animation: paused;
+        }
+
+        @keyframes myAnime1 {
+
+            /*可以添加多个百分比值*/
+            0% {
+                background-color: aliceblue;
+            }
+
+            25% {
+                background-color: red;
+                opacity: 0.5;
+            }
+
+            50% {
+                background-color: green;
+                width: 200px;
+            }
+
+            75% {
+                background-color: blue;
+                height: 200px;
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes myAnime2 {
+
+            /*可以添加多个百分比值*/
+            0% {
+                background-color: aliceblue;
+                width: 100px;
+            }
+
+            50% {
+                background-color: gray;
+                width: 200px;
+            }
+
+            100% {
+                background-color: aliceblue;
+                width: 100px;
+            }
+        }
+
+        @keyframes myAnime3 {
+            100% {
+                background-color: violet;
+                opacity: 1;
+            }
+        }
+
+        .breathing-circle {
+            width: 100px;
+            height: 100px;
+            background-color: #007BFF;
+            border-radius: 50%;
+            margin: 50px auto;
+            animation: breathe 3s infinite ease-in-out alternate;
+        }
+
+        @keyframes breathe {
+            from {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+
+            to {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+    </div>
+    <div style="animation: myAnime2 7s infinite;">
+    </div>
+    <div style="animation: myAnime1 5s alternate infinite;">
+    </div>
+    <div style="animation:myAnime1 1s infinite;">
+    </div>
+    <div class="breathing-circle">
+    </div>
+</body>
+
+</html>

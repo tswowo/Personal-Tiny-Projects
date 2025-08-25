@@ -1,0 +1,67 @@
+/* 1.通配符 全局选择器 */
+*{
+    margin: 0;
+    padding: 0;
+    background-color:antiquewhite;
+    color: chocolate;
+    font-family: "Microsoft YaHei", "微软雅黑", "宋体", "Arial", "sans-serif";
+    font-size: 30px;
+}
+
+/* 2.元素选择器 */
+h1{
+    color: blue;
+    font-size: 50px;
+}
+
+h2{
+    color: green;
+    font-size: 50px;
+}
+
+h3{
+    color: red;
+    font-size: 50px;
+}
+
+p{
+    color: red;
+    font-size: 40px;
+}
+
+em{
+    color: orange;
+    font-weight:bold;
+}
+
+li{
+    color: purple;
+    font-size: 30px;
+}
+
+/* 3.类选择器 */
+.class_one{
+    color: blue;
+    font-size: 50px;
+    text-align: center;
+}
+
+.class_two{
+    color: green;
+    font-size: 50px;
+    text-align: center;
+}
+
+.class_three{
+    color: red;
+    font-size: 50px;
+    text-align: center;
+}
+
+.class_q{
+    color:violet;
+}
+
+.class_q{
+    font-size:20px;
+}

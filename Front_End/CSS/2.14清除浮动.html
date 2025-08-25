@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <style>
+        .container {
+            width: 400px;
+            background-color: antiquewhite;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            /* float: left; */
+            margin: 5px;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            float: left;
+            margin: 5px;
+        }
+
+        .text{
+            width: 50px;
+            height: 50px;
+            background-color: violet;
+            margin: 10px;
+            clear: both;/*left清除左浮动,right清除右浮动,both清除两侧浮动*/
+        }
+
+        .container::after{
+            content: "";
+            overflow: hidden;
+            clear: both;
+        }
+    </style>
+
+</head>
+
+<body>
+    <em>
+        清除浮动
+        <br>
+        因为浮动可能会导致父元素高度塌陷或影响后续元素
+    </em>
+    <br>
+    <h1>
+        无浮动是这样的:
+        <br>
+        外部元素的高度由三个内部元素决定 50+5+50+5+50=160
+    </h1>
+    <div class="container">
+        <div class="box1"></div>
+        <br>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="text"></div>
+    </div>
+    <h1>
+        有浮动是这样的:
+        <br>
+        因为三个内容元素都启用了float,外部元素的高度不会由三个元素的高度决定了,故为0
+    </h1>
+    <div class="container">
+        <div class="box2"></div>
+        <br>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="text" style="clear: none;"></div>
+    </div>
+    <div class="container">
+        <div class="box2"></div>
+        <br>
+        <div class="box2"></div>
+        <div class="box2"></div>
+    </div>
+    <h1>
+        使用子元素清除浮动之后是这样的:
+        <br>
+        clear:不允许元素的某侧出现浮动
+        <br>
+        left清除左浮动,right清除右浮动,both清除两侧浮动
+    </h1>
+    <div class="container">
+        <div class="box2"></div>
+        <br>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="text"></div>
+    </div>
+    <h1>
+        使用父元素清除浮动之后是这样的:
+        <br>
+        clear:left清除左浮动,right清除右浮动,both清除两侧浮动
+    </h1>
+    <div class="container" style="overflow: hidden;clear: both;">
+        <div class="box2"></div>
+        <br>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="text"></div>
+    </div>
+</body>
+
+</html>

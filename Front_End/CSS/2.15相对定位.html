@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+        }
+
+        .relative-box {
+            position: relative;
+            top: 50px;
+            /* top向下移动 */
+            left: 20px;
+            /* left向右移动 */
+
+            /* bottom: -10px;
+            bottom: 10px; */
+            
+            /* bottom: -10px 等同于 top: 10px，即让元素从原本位置向下偏移 10 像素。因为 bottom 为负时，元素会朝 top 方向移动。 */
+            /*但是实际上,如果规定了top属性,那么bottom属性一般会被忽略*/
+            /*使用left,也会忽略right*/
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <em>相对定位仍依赖于文档流</em>
+    <div class="box">普通盒子</div>
+    <div class="box relative-box">相对定位盒子</div>
+    <div class="box">普通盒子</div>
+    <span>虽然显示位置改变了,但是在文档流中的实际空间仍然保留着</span>
+</body>
+
+</html>

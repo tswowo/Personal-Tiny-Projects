@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性盒子模型</title>
+
+    <style>
+        .contain{
+            display: flex;/*弹性盒子内默认 为横向摆放*/
+            /* width: 700px; *//*我将宽度注释掉，这样背景容器会跟随浏览器窗口的大小变化而变化,可以看到内部子元素的相对布局不变*/
+            height: 700px;
+            background-color: antiquewhite;
+            /*flex-direction属性指定了弹性子元素在父容器中的位置*/
+            /* row从左到右(默认值) row-reverse从右到左 column从上到下 column-reverse从下到上 */
+            flex-direction: column;/*倒不如把这个看作为规定方向*/
+            /* justify-content属性指定了将弹性项按照主轴线(main axis)对齐 */
+            /* flex-start行头填充(默认值) flex-end行尾填充 center居中填充 */
+            justify-content:flex-start;
+            /* align-items设置或检索在侧轴线对齐 */
+            /* flex-start行头填充(默认值) flex-end行尾填充 center居中填充 */
+            align-items: center;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            flex:1;
+            /* flex是作用在子元素上的属性，为flex-grow:1;flex-shrink:1;flex-basic:0;的简写
+            分别意为:在主轴方向上的放大比例(默认为1),在主轴方向上的缩小比例(默认为1),
+            在分配剩余空间之前，Flex 项目的初始大小。它可以是一个长度值（如 200px）或百分比。默认值是 auto，表示项目的初始大小由其内容决定。 */
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            flex:1;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+            flex:2;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-image: url("../zzm1.png");
+            background-size: cover;
+            flex:2;
+
+        }
+    </style>
+</head>
+
+<body>
+    <em>
+        弹性盒子模型
+        <br>
+        CSS3的一种新的布局模式,确保当页面大小不一定时也能保证元素拥有恰当的布局
+        <br>
+        目的是更有效地对一个容器中的子元素进行排序，对齐和分配空白空间
+        <br>
+    </em>
+    <h1>
+        弹性盒子由弹性盒子(Flex container)和弹性子元素(Flex item)组成
+        <br>
+        通过设置display属性为flex,将其定义为弹性容器
+        <br>
+        一个弹性容器内包括多个弹性子元素
+        <br>
+        <em style="color: red;">
+            弹性盒子在页面中布局,及弹性子元素的内部布局是正常的,弹性盒子只定义弹性子元素在弹性盒子内的布局
+        </em>
+    </h1>
+    <div class="contain">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+
+</html>

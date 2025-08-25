@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Person()
+        {
+            this.name=name;
+            this.age=age;
+            this.getName=function()
+            {
+                return this.name;
+            }
+        }
+        Person.prototype.getAge=function()
+        {
+            return this.age;
+        }
+        var person1=new Person("张三",18);
+        var person2=new Person("李四",20);
+        console.log(person1.getName());
+        console.log(person1.getAge());
+
+    </script>
+</body>
+</html>

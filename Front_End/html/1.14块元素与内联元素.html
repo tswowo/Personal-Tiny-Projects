@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块元素与内联元素</title>
+</head>
+<body>
+    <em>块元素与内联元素</em>
+    <ol>
+        <span>
+            HTML5中元素按照内容模型来区分
+        </span>
+        <li>元数据型元素 区块型 标题型 文档流型 语句型 内嵌型 交互型</li>
+        <li>元素不属于任何类别则为穿透的，元素也可以是混合的</li>
+        死记这个没什么用
+    </ol>
+    <span>
+        <em>所以我们仍然按照块元素和内联元素进行学习：</em>
+        <h1>HTML5中的块元素</h1>
+        <p>HTML5中的块元素有:header、footer、nav、article、section、aside、hgroup、figure、figcaption、details、summary、menu</p>
+        <h1>HTML5中的内联元素</h1>
+        <p>HTML5中的内联元素有:a、abbr、acronym、b、bdo、big、br、button、cite、code、dfn、em、i、<br>
+            img、input、kbd、label、map、object、q、samp、script、select、small、span、strong、sub、sup、textarea、tt、var</p>
+        <br>
+        <table border="2">
+            <tr>
+                <td>块元素</td>
+                <td>内联元素</td>
+            </tr>
+            <tr>
+                <td>在页面中独占一行</td>
+                <td>只占自身大小</td>
+            </tr>
+            <tr>
+                <td>可以设置width,height等属性</td>
+                <td>不能设置width,height等属性</td>
+            </tr>
+            <tr>
+                <td>可以包含块元素和内联元素</td>
+                <td>只能包含内联元素</td>
+        </table>
+    </span>
+    <h1>
+        <span>下面举几个例子</span>
+        <ul>
+            <li>
+                这是一些块元素:
+                <a href="#">超链接</a>
+                <span>内容</span>
+                <em>加重</em>
+            </li>
+            <li>
+                这是一些行内元素：
+                <button>按钮</button> <code>System.out.println("code元素");</code> <var>变量</var>
+            </li>
+            <li>
+                部分行内块级元素可以不换行且可调整width等属性：
+                <span style="display:inline-block;width:100px;height:100px;background-color:blue;"></span>
+                <span style="display:inline-block;width:50px;height:30px;background-color:red;"></span>
+                <img src="zzm1.png" alt="图片" style="display:inline-block;width:50px;height:70px;">
+                <img src="zzm2.png" alt="图片" style="display:inline-block;width:50px;height:70px;">
+                <span style="display:inline-block;width:60px;height:60px;background-color:yellow;"></span>
+            </li>
+            <li></li>
+        </ul>
+    </h1>
+</body>
+</html>

@@ -1,0 +1,10 @@
+var a="123";
+console.log("a:"+a);
+var b=123;
+console.log("b:"+b);
+console.log("a!=b:"+(a!=b));
+console.log("a==b:"+(a==b));
+console.log("a===b:"+(a===b));
+console.log("the_string:"+typeof "the_string"+'\r');
+console.log("the_number:"+typeof 123);
+console.log("the_boolean:"+typeof true);

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS的引入方式</title>
+    <style>
+        h2{
+            background-color: orange;
+            color: blue;
+            font-size: 24px;
+        }
+    </style>
+    <link rel="stylesheet" href="2.2CSS的引入方式.css">
+</head>
+<body>
+    <em>
+        CSS的引入方式
+    </em>
+    <h1 style="background-color: black;color:red;font-size: 24px;">
+        <span>1.内联样式(行内样式)</span>
+        <br>
+        <span style="font-size: 20px;">这种方式缺乏整体性和规划性，不利于维护，维护成本高</span>
+    </h1>
+    <h2>
+        <span>2.内部样式(嵌入式样式)</span>
+        <br>
+        <span style="font-size: 20px;">当单个文档需要特殊的样式时，使用内部样式表。在head中定义style</span>
+        <br>
+        <span style="font-size: 20px;">单个页面中的CSS代码具有统一性和规划性，便于维护，但是在多个页面之间容易造成混乱</span>
+    </h2>
+    <h3>
+        <span>3.外部样式(链接式样式)</span>
+        <br>
+        <span style="font-size: 20px;">当多个页面需要共享相同的样式时，使用外部样式表。</span>
+        <br>
+        <span style="font-size: 20px;">在head中定义link，每个页面使用link标签链接到样式表</span>
+        <br>
+        <span style="font-size: 20px;">这样可以通过改变一个文件来改变正个站点的外观</span>
+        <br>
+        <span style="font-size: 20px;">外部样式表具有统一性和规划性，便于维护，但是需要额外的文件，增加了服务器的压力</span>
+        <br>
+        <span>rel资源类型 href资源路径</span>
+    </h3>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createObject(name,age) {//使用工厂模式构造对象
+            var OBJ=new Object();
+            OBJ.name=name;
+            OBJ.age=age;
+            OBJ.getName=function(){
+                return this.name;
+            }
+            OBJ.setName=function(name){
+                this.name=name;
+            }
+            return OBJ;
+        }
+        for(var i=0;i<100;i++)
+        {
+            var tmp=createObject("name"+i,i);
+            console.log(tmp.getName());
+        }
+    </script>
+</body>
+</html>

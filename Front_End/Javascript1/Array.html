@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <script>
+        //使用对象创建数组
+        console.log(nums);
+        var nums=new Array();
+        console.log(nums);
+        nums[0]=1;
+        nums[2]=2;
+        nums[3]="three";
+        nums[4]=new Object();
+        console.log(nums);
+
+        //使用字面量创建数组
+        var nums2=[2,2,3,"three",new Object()];
+        console.log(nums2);
+        //使用Array构造函数创建数组
+        var nums3=new Array(3,2,3,"three",new Object());
+        console.log(nums3);
+        //使用Array构造函数创建数组
+        var nums4=new Array(5);
+        console.log(nums4);
+        nums4[0]=4;
+        console.log(nums4);
+        //使用Array构造函数创建数组
+        var nums5=new Array(5,2,3,4,5);
+        console.log(nums5);
+
+        //push and pop
+        var nums6=new Array();
+        nums6.push("one");
+        nums6.push("two");
+        nums6.push("three");
+        console.log("here's nums6: ", nums6);
+        for(var i=0; i<nums6.length; i++){
+            console.log("here's nums6[" + i + "]: ", nums6[i]);
+        }
+        var tmp=nums6.pop();
+        console.log("here's nums6 after pop: ", nums6);
+        for(var i=0; i<nums6.length; i++){
+            console.log("here's nums6[" + i + "]: ", nums6[i]);
+        }
+        console.log("here's the popped element: ", tmp);
+        nums6.unshift("zero");
+        console.log("here's nums6 after unshift: ", nums6);
+        for(var i=0; i<nums6.length; i++){
+            console.log("here's nums6[" + i + "]: ", nums6[i]);
+        }
+        var tmp=nums6.shift();
+        console.log("here's the shifted element: ", tmp);
+        console.log("here's nums6 after shift: ", nums6);
+        for(var i=0; i<nums6.length; i++){
+            console.log("here's nums6[" + i + "]: ", nums6[i]);
+        }
+    </script>
+</body>
+</html>

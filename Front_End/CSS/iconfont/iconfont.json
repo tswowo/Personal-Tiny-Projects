@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "18267911",
+      "name": "二维码",
+      "font_class": "erweima",
+      "unicode": "e98d",
+      "unicode_decimal": 59789
+    },
+    {
+      "icon_id": "18267945",
+      "name": "扫码",
+      "font_class": "saoma",
+      "unicode": "e995",
+      "unicode_decimal": 59797
+    },
+    {
+      "icon_id": "18267968",
+      "name": "性能计算",
+      "font_class": "xingnengjisuan",
+      "unicode": "e99a",
+      "unicode_decimal": 59802
+    },
+    {
+      "icon_id": "18267970",
+      "name": "隐私保护",
+      "font_class": "yinsibaohu",
+      "unicode": "e99b",
+      "unicode_decimal": 59803
+    },
+    {
+      "icon_id": "18267972",
+      "name": "真实可信",
+      "font_class": "zhenshikexin",
+      "unicode": "e99c",
+      "unicode_decimal": 59804
+    }
+  ]
+}

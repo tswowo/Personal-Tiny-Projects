@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //创建对象
+        console.log("Hello World");
+        var person1=new Object();
+        person1.name="John";
+        person1.age=30;
+        person1.city="New York";
+        person1.greet=function(){
+            console.log("Hello, my name is " + this.name);
+        }
+        person1.putAge=function(){
+            console.log("My age is " + this.age);
+        }
+        console.log(person1);
+
+        var person2={
+            name : "Mike",
+            age : 25,
+            city : "Los Angeles",
+            greet : function(){
+                console.log("Hello, my name is " + this.name);
+            }
+        }
+        console.log(person2);
+        //访问与删除属性
+        delete person1.age;
+        console.log(person1.age);
+        console.log(person1);
+        delete person1["age"];
+        console.log(person1.age);
+        console.log(person1);
+        //遍历对象
+        for(var key in person1)
+            console.log(key + ": " + person1[key]);
+        //判断对象是否有某个属性
+        console.log("name" in person1);
+        console.log("age" in person1);
+        //当变量是一个对象时，其实储存的是对象的引用
+        //当我们将一个对象赋值给另一个变量时，实际上是将对象的引用传递给了新变量
+        //这意味着如果我们修改了新变量所引用的对象，原始对象也会受到影响
+        let obj1 = {
+            name: '小明',
+            age: 18
+        }
+        let obj2 = obj1
+        obj2.name = '小红'
+        console.log(obj1.name) // 小红
+        console.log(obj2.name) // 小红
+        //基本类型在栈中保存，引用类型在堆中保存
+    </script>
+</body>
+</html>
