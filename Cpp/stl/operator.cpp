@@ -16,6 +16,14 @@ class Myclass{
 		string name;
 	public:
 		Myclass(int id,string name):id(id),name(name){}
+		Myclass(int id)
+		{
+			this->id=id;
+		}
+		Myclass(string name)
+		{
+			this->name=name;
+		}
 		bool operator<(const Myclass&b)//对象内的operator内隐含一个this指针 
 		{
 			if(this->id!=b.id)
